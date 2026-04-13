@@ -1,0 +1,1112 @@
+[
+  {
+    "_id": "6989be62a32d17b568046d5c",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "1",
+      "date": "2026-02-09T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "69819ad89f21a6de7535fbe5",
+        "_id": "6989be62a32d17b568046d5d"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "6989be62a32d17b568046d5e"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "6989be62a32d17b568046d5f"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-09T10:39:37.168Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "",
+    "status": "Pending",
+    "time": "4:30:50 pm",
+    "createdAt": "2026-02-09T11:00:50.601Z",
+    "updatedAt": "2026-02-09T11:00:50.601Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d355e7b2532d17a4548d2",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-102",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "billType": "",
+      "bankAccount": "",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d355e7b2532d17a4548d3"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "",
+    "status": "Pending",
+    "time": "5:21:34 am",
+    "createdAt": "2026-02-24T05:21:34.707Z",
+    "updatedAt": "2026-02-24T05:21:34.707Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d370e7b2532d17a454ea7",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-105",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d370e7b2532d17a454ea8"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item",
+    "status": "Pending",
+    "time": "5:28:46 am",
+    "createdAt": "2026-02-24T05:28:46.311Z",
+    "updatedAt": "2026-02-24T05:28:46.311Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d377c7b2532d17a45575e",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-107",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d377c7b2532d17a45575f"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item",
+    "status": "Pending",
+    "time": "5:30:36 am",
+    "createdAt": "2026-02-24T05:30:36.400Z",
+    "updatedAt": "2026-02-24T05:30:36.400Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d37e08452d0917869b48c",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-108",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d37e08452d0917869b48d"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T05:17:28.077Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item",
+    "status": "Pending",
+    "companyId": null,
+    "time": "11:02:16 am",
+    "createdAt": "2026-02-24T05:32:16.434Z",
+    "updatedAt": "2026-02-24T05:32:16.434Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d387f8452d0917869b778",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-110",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d387f8452d0917869b779"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T05:17:28.077Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item",
+    "status": "Pending",
+    "companyId": null,
+    "time": "11:04:55 am",
+    "createdAt": "2026-02-24T05:34:55.785Z",
+    "updatedAt": "2026-02-24T05:34:55.785Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d38aa7b2532d17a455a4a",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-111-UPDATED",
+      "date": "2026-02-24T06:12:58.000Z",
+      "godown": "HO",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals"
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 2,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 200,
+        "sellPrice": 0,
+        "combinationId": "",
+        "remark": "",
+        "_id": "699d416c7b2532d17a4587a1"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "GST",
+        "type": "Additive",
+        "percentage": 3,
+        "amount": 6,
+        "_id": "699d416c7b2532d17a4587a2"
+      }
+    ],
+    "grossAmount": 200,
+    "subtotal": 200,
+    "taxesAmount": 0,
+    "netAmount": 200,
+    "paidAmount": 50,
+    "dueAmount": 150,
+    "orderQty": 2,
+    "usedQty": 0,
+    "balQty": 2,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Updated quantity after verifying physical stock",
+    "status": "Pending",
+    "time": "5:35:38 am",
+    "createdAt": "2026-02-24T05:35:38.429Z",
+    "updatedAt": "2026-02-24T06:13:00.910Z",
+    "__v": 3
+  },
+  {
+    "_id": "699d3eb97b2532d17a4569ac",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "112",
+      "date": "2026-02-24T06:10:15.000Z",
+      "godown": "HO",
+      "bookedBy": "Branding"
+    },
+    "partyData": {
+      "partyAccount": "Amaar"
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "Crizal Lens",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": 2,
+        "axis": 90,
+        "add": 1,
+        "qty": 10,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 1000,
+        "sellPrice": 0,
+        "combinationId": "",
+        "remark": "",
+        "_id": "699d40ca7b2532d17a457e80"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 1000,
+    "subtotal": 1000,
+    "taxesAmount": 0,
+    "netAmount": 1000,
+    "paidAmount": 25,
+    "dueAmount": 975,
+    "orderQty": 10,
+    "usedQty": 0,
+    "balQty": 10,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Return Defected Item",
+    "status": "Pending",
+    "time": "6:01:29 am",
+    "createdAt": "2026-02-24T06:01:29.733Z",
+    "updatedAt": "2026-02-24T06:10:18.102Z",
+    "__v": 1
+  },
+  {
+    "_id": "699d3f3f7b2532d17a456ca2",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-112",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d3f3f7b2532d17a456ca3"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 5,
+    "dueAmount": 95,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item - Payment pending adjustment",
+    "status": "Pending",
+    "time": "6:03:43 am",
+    "createdAt": "2026-02-24T06:03:43.913Z",
+    "updatedAt": "2026-02-24T06:03:43.913Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d3f4d7b2532d17a457270",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-113",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d3f4d7b2532d17a457271"
+      }
+    ],
+    "taxes": [],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 5,
+    "dueAmount": 95,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item - Payment pending adjustment",
+    "status": "Pending",
+    "time": "6:03:57 am",
+    "createdAt": "2026-02-24T06:03:57.105Z",
+    "updatedAt": "2026-02-24T06:03:57.105Z",
+    "__v": 0
+  },
+  {
+    "_id": "699d3fe77b2532d17a457851",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "PR-114",
+      "date": "2026-02-24T00:00:00.000Z",
+      "godown": "HO",
+      "bookedBy": "Vikas Salvi",
+      "billType": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "699d3fe77b2532d17a457852"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "_id": "699d3fe77b2532d17a457853"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "_id": "699d3fe77b2532d17a457854"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 5,
+    "dueAmount": 100,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-24T04:53:05.722Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "Returning defected item - tax breakdown included",
+    "status": "Pending",
+    "time": "6:06:31 am",
+    "createdAt": "2026-02-24T06:06:31.597Z",
+    "updatedAt": "2026-02-24T06:06:31.597Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a68afdbe5d2fec5ed2ae2b",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "1",
+      "date": "2026-03-03T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "69a68afdbe5d2fec5ed2ae2c"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a68afdbe5d2fec5ed2ae2d"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a68afdbe5d2fec5ed2ae2e"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-03-03T07:14:44.754Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "",
+    "status": "Pending",
+    "companyId": "699d38c830d447103770fbca",
+    "time": "12:47:17 pm",
+    "createdAt": "2026-03-03T07:17:17.481Z",
+    "updatedAt": "2026-03-03T07:17:17.481Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a68b13be5d2fec5ed2edf4",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "2",
+      "date": "2026-03-03T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding"
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111",
+      "stateCode": "Maharashtra",
+      "creditLimit": 10000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 2,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 200,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "69a68b20be5d2fec5ed32dc6"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a68b20be5d2fec5ed32dc7"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a68b20be5d2fec5ed32dc8"
+      }
+    ],
+    "grossAmount": 200,
+    "subtotal": 200,
+    "taxesAmount": 0,
+    "netAmount": 200,
+    "paidAmount": 0,
+    "dueAmount": 200,
+    "orderQty": 2,
+    "usedQty": 0,
+    "balQty": 2,
+    "deliveryDate": "2026-03-03T07:14:44.754Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "",
+    "status": "Pending",
+    "companyId": "699d38c830d447103770fbca",
+    "time": "12:47:39 pm",
+    "createdAt": "2026-03-03T07:17:39.160Z",
+    "updatedAt": "2026-03-03T07:17:52.908Z",
+    "__v": 1
+  },
+  {
+    "_id": "69a6945dbe5d2fec5ed36df4",
+    "billData": {
+      "billSeries": "PR(26-27)",
+      "billNo": "3",
+      "date": "2026-03-03T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111",
+      "stateCode": "Maharashtra",
+      "creditLimit": 10000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "purchasePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "remark": "",
+        "_id": "69a6945dbe5d2fec5ed36df5"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a6945dbe5d2fec5ed36df6"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a6945dbe5d2fec5ed36df7"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-03-03T07:14:44.754Z",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "remark": "",
+    "status": "Pending",
+    "companyId": "699d38c830d447103770fbca",
+    "time": "1:27:17 pm",
+    "createdAt": "2026-03-03T07:57:17.448Z",
+    "updatedAt": "2026-03-03T07:57:17.448Z",
+    "__v": 0
+  }
+]

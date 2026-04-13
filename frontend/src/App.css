@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+.hide-scroll{
+  scrollbar-width:none ;
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;             
+}
+/* Global Action-Level Loading Feedback */
+body.is-api-loading button:not([data-no-loading]):disabled {
+  position: relative;
+  text-indent: -9999px; /* Hide text */
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+body.is-api-loading button:not([data-no-loading]):disabled::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  text-indent: 0;
+  z-index: 10;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Skeleton Loader Placeholder Base */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

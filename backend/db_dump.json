@@ -1,0 +1,202 @@
+{
+  "sample": [
+    {
+      "_id": "697086c4152a18a6ad848635",
+      "itemName": "CR BB BLUE",
+      "qty": 5,
+      "sellPrice": 0,
+      "salePrice": 0,
+      "totalAmount": 0
+    },
+    {
+      "_id": "6970b2597210f493d3ec1259",
+      "itemName": "LensKart Product 1",
+      "qty": 4,
+      "sellPrice": 0,
+      "salePrice": 200,
+      "totalAmount": 800
+    },
+    {
+      "_id": "6971b51b8abe00d6ff502dab",
+      "itemName": "CR KT HC +3.00 SPH",
+      "qty": 10,
+      "sellPrice": 0,
+      "salePrice": 0,
+      "totalAmount": 0
+    },
+    {
+      "_id": "6971b5488abe00d6ff50354a",
+      "itemName": "LensKart Product 1",
+      "qty": 1,
+      "sellPrice": 0,
+      "salePrice": 2000,
+      "totalAmount": 2000
+    },
+    {
+      "_id": "6971b89b8abe00d6ff503844",
+      "itemName": "CR BLUE BLOCK SHMC 1.56",
+      "qty": 5,
+      "sellPrice": 0,
+      "salePrice": 0,
+      "totalAmount": 0
+    }
+  ],
+  "agg": [
+    {
+      "_id": "PG KT SHMC 1.56",
+      "sumQty": 17,
+      "liveProfitOld": 0,
+      "liveProfitNew": 1250
+    },
+    {
+      "_id": "Test Item",
+      "sumQty": 1,
+      "liveProfitOld": 0,
+      "liveProfitNew": 100
+    },
+    {
+      "_id": "Blue Cut Lens",
+      "sumQty": 14,
+      "liveProfitOld": 0,
+      "liveProfitNew": 7000
+    },
+    {
+      "_id": "lens3",
+      "sumQty": 53,
+      "liveProfitOld": 0,
+      "liveProfitNew": 18400
+    },
+    {
+      "_id": "CR SHMC 1.56",
+      "sumQty": 60,
+      "liveProfitOld": 0,
+      "liveProfitNew": 6000
+    },
+    {
+      "_id": "Crizal",
+      "sumQty": 65,
+      "liveProfitOld": 0,
+      "liveProfitNew": 24700
+    },
+    {
+      "_id": "",
+      "sumQty": 2,
+      "liveProfitOld": 0,
+      "liveProfitNew": 100
+    },
+    {
+      "_id": "LensKart Product 1",
+      "sumQty": 9,
+      "liveProfitOld": 0,
+      "liveProfitNew": 4800
+    },
+    {
+      "_id": "CR BB BLUE",
+      "sumQty": 7,
+      "liveProfitOld": 0,
+      "liveProfitNew": 237.5
+    },
+    {
+      "_id": "Bcat Item",
+      "sumQty": 1,
+      "liveProfitOld": 0,
+      "liveProfitNew": 200
+    },
+    {
+      "_id": "CR PG V2 HMC +3.00SPH",
+      "sumQty": 20,
+      "liveProfitOld": 0,
+      "liveProfitNew": 4000
+    },
+    {
+      "_id": "lens7",
+      "sumQty": 185,
+      "liveProfitOld": 0,
+      "liveProfitNew": 34976.9
+    },
+    {
+      "_id": "CR PG KT HC +3.00 SPH",
+      "sumQty": 212,
+      "liveProfitOld": 0,
+      "liveProfitNew": 24315.5
+    },
+    {
+      "_id": "CR KT HMC",
+      "sumQty": 10,
+      "liveProfitOld": 0,
+      "liveProfitNew": 1100
+    },
+    {
+      "_id": "Crizal  Lens",
+      "sumQty": 2,
+      "liveProfitOld": 0,
+      "liveProfitNew": 1000
+    },
+    {
+      "_id": "CR BLUE BLOCK SHMC 1.56",
+      "sumQty": 382,
+      "liveProfitOld": 0,
+      "liveProfitNew": 45937.5
+    },
+    {
+      "_id": "CR DRIVEX 1.56",
+      "sumQty": 8,
+      "liveProfitOld": 0,
+      "liveProfitNew": 2200
+    },
+    {
+      "_id": "lens2",
+      "sumQty": 2,
+      "liveProfitOld": 0,
+      "liveProfitNew": 0
+    },
+    {
+      "_id": "CR PG BB SHMC +3.00SPH",
+      "sumQty": 20,
+      "liveProfitOld": 0,
+      "liveProfitNew": 0
+    },
+    {
+      "_id": "CR KT HC +3.00 SPH",
+      "sumQty": 170,
+      "liveProfitOld": 0,
+      "liveProfitNew": 0
+    },
+    {
+      "_id": "CR PG HC (-4.00/-2.00)",
+      "sumQty": 60,
+      "liveProfitOld": 0,
+      "liveProfitNew": 0
+    },
+    {
+      "_id": "DRIVE X 1.56",
+      "sumQty": 5,
+      "liveProfitOld": 0,
+      "liveProfitNew": 1250
+    },
+    {
+      "_id": "CR HC -8.00-2.00",
+      "sumQty": 10,
+      "liveProfitOld": 0,
+      "liveProfitNew": 500
+    },
+    {
+      "_id": "test1",
+      "sumQty": 4,
+      "liveProfitOld": 0,
+      "liveProfitNew": 400
+    },
+    {
+      "_id": "test2",
+      "sumQty": 5,
+      "liveProfitOld": 0,
+      "liveProfitNew": 1400
+    },
+    {
+      "_id": "test3",
+      "sumQty": 20,
+      "liveProfitOld": 0,
+      "liveProfitNew": 3400
+    }
+  ]
+}

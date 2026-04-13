@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="/src/App.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optical Store</title>
+    <script>
+      // Suppress the harmless "A listener indicated an asynchronous response..." error 
+      // which is caused by browser extensions and not the application code.
+      window.addEventListener('error', (e) => {
+        if (e.message && e.message.includes('message channel closed')) {
+          e.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('unhandledrejection', (e) => {
+        if (e.reason && e.reason.message && e.reason.message.includes('message channel closed')) {
+          e.stopImmediatePropagation();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "billData": {
+    "billSeries": "",
+    "billNo": "",
+    "date": "2026-02-28T04:57:47.949Z",
+    "billType": "",
+    "bankAccount": "",
+    "godown": "",
+    "bookedBy": ""
+  },
+  "partyData": {
+    "CurrentBalance": {
+      "amount": 0,
+      "type": "Dr"
+    },
+    "partyAccount": "",
+    "address": "",
+    "contactNumber": "",
+    "stateCode": "",
+    "creditLimit": 0
+  },
+  "_id": "69a275cbc0cc6203e310f76d",
+  "items": [
+    {
+      "barcode": "",
+      "itemName": "",
+      "unit": "",
+      "dia": "",
+      "eye": "R",
+      "sph": 2,
+      "cyl": 3,
+      "axis": 120,
+      "add": 0,
+      "qty": 2,
+      "isInvoiced": false,
+      "isChallaned": false,
+      "salePrice": 100,
+      "discount": 0,
+      "totalAmount": 0,
+      "sellPrice": 0,
+      "combinationId": "695e2ee7bac6152605a1807f",
+      "orderNo": "",
+      "remark": "",
+      "vendor": "",
+      "customer": "",
+      "itemStatus": "Pending",
+      "_id": "69a275cbc0cc6203e310f76e"
+    }
+  ],
+  "taxes": [],
+  "orderQty": 2,
+  "usedQty": 0,
+  "balQty": 2,
+  "grossAmount": 200,
+  "subtotal": 0,
+  "taxesAmount": 0,
+  "netAmount": 0,
+  "paidAmount": 0,
+  "dueAmount": 0,
+  "deliveryDate": "2026-02-28T04:57:47.947Z",
+  "remark": "",
+  "status": "Pending",
+  "companyId": "699d38c830d447103770fbca",
+  "isOrderPlaced": false,
+  "orderPlacedAt": null,
+  "usageHistory": [],
+  "time": "10:27:47 am",
+  "usedIn": [],
+  "createdAt": "2026-02-28T04:57:47.959Z",
+  "updatedAt": "2026-02-28T04:57:47.959Z",
+  "__v": 0
+}

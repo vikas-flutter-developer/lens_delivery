@@ -1,0 +1,232 @@
+/* Custom scrollbar for the navbar */
+.hide-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.hide-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hide-scroll::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 3px;
+}
+
+.hide-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Hierarchy visual guides */
+.nav-item {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Level indicators */
+.nav-item[data-level="1"]::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: rgba(156, 163, 175, 0.2);
+}
+
+.nav-item[data-level="2"]::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: rgba(156, 163, 175, 0.15);
+}
+
+/* Hover effects */
+.nav-item:hover {
+  transform: translateX(2px);
+}
+
+/* Active state enhancements */
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgb(59, 130, 246);
+  border-radius: 4px 0 0 4px;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Level-specific typography */
+.nav-item[data-level="0"] {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.nav-item[data-level="1"] {
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.nav-item[data-level="2"] {
+  font-size: 0.9em;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* Submenu animation */
+.submenu-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.submenu-enter-active {
+  max-height: 1000px;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.submenu-exit {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.submenu-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+/* Active indicator animation */
+.active-indicator {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* Search highlight animation */
+.search-highlight {
+  animation: highlight 1s ease-in-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    background-color: rgba(59, 130, 246, 0.2);
+  }
+}
+
+/* Submenu structure visualization */
+.submenu-container {
+  position: relative;
+}
+
+.submenu-container::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(156, 163, 175, 0.1) 10%,
+    rgba(156, 163, 175, 0.1) 90%,
+    transparent
+  );
+}
+
+/* Submenu item connection lines */
+.submenu-item::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  width: 12px;
+  height: 1px;
+  background: rgba(156, 163, 175, 0.1);
+  transform-origin: left;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.submenu-item:hover::before {
+  opacity: 0.5;
+  transform: scaleX(1.2);
+}
+
+/* Level-specific typography and spacing */
+.menu-item {
+  position: relative;
+  margin: 2px 0;
+}
+
+.menu-item[data-level="0"] {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 8px;
+  border-bottom: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+.menu-item[data-level="1"] {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: 8px;
+  background: rgba(31, 41, 55, 0.7);
+  border-left: 2px solid rgba(75, 85, 99, 0.4);
+}
+
+.menu-item[data-level="2"] {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-left: 16px;
+  background: rgba(55, 65, 81, 0.5);
+  border-left: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+/* Visual connection lines */
+.menu-item[data-level="1"]::before,
+.menu-item[data-level="2"]::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: rgba(156, 163, 175, 0.15);
+}
+
+/* Active path highlighting */
+.active-path {
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+}
+
+.active-path::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgb(59, 130, 246);
+  opacity: 0.5;
+}

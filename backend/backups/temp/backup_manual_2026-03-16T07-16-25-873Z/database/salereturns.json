@@ -1,0 +1,562 @@
+[
+  {
+    "_id": "6965e15474a92cef4e7af46d",
+    "billData": {
+      "billSeries": "SALE",
+      "billNo": "15641614",
+      "date": "2026-01-13T00:00:00.000Z",
+      "billType": "",
+      "godown": "",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "CR SHMC 1.56",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": -2,
+        "cyl": 0,
+        "axis": 0,
+        "add": 0,
+        "qty": 20,
+        "isInvoiced": false,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "sellPrice": 0,
+        "combinationId": "6965dec674a92cef4e7a0337",
+        "_id": "6965e15474a92cef4e7af46e"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "6965e15474a92cef4e7af46f"
+      }
+    ],
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "deliveryDate": "2026-01-13T05:37:35.989Z",
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "time": "6:08:20 am",
+    "createdAt": "2026-01-13T06:08:20.198Z",
+    "updatedAt": "2026-01-13T06:08:20.198Z",
+    "__v": 0
+  },
+  {
+    "_id": "6975c0eaf7f4d1c3d24753b4",
+    "billData": {
+      "billSeries": "9930954458",
+      "billNo": "123456",
+      "date": "2026-01-25T00:00:00.000Z",
+      "billType": "GST 5%",
+      "godown": "G1",
+      "bookedBy": "JIGAR",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "CR PG KT HC +3.00 SPH",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 1,
+        "qty": 0,
+        "isInvoiced": false,
+        "salePrice": 125,
+        "discount": 0,
+        "totalAmount": 0,
+        "sellPrice": 0,
+        "combinationId": "6975be05f7f4d1c3d246d4b8",
+        "_id": "6975c0eaf7f4d1c3d24753b5"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "meta": {
+          "_id": "697221b399f68e4158526e3c",
+          "Name": "GST 5%",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": true,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-22T13:10:11.118Z",
+          "updatedAt": "2026-01-22T13:10:11.118Z",
+          "__v": 0
+        },
+        "_id": "6975c0eaf7f4d1c3d24753b6"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 5,
+        "amount": 0,
+        "meta": {
+          "_id": "697221b399f68e4158526e3c",
+          "Name": "GST 5%",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": true,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-22T13:10:11.118Z",
+          "updatedAt": "2026-01-22T13:10:11.118Z",
+          "__v": 0
+        },
+        "_id": "6975c0eaf7f4d1c3d24753b7"
+      }
+    ],
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "deliveryDate": "2026-01-25T06:07:22.404Z",
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "time": "7:06:18 am",
+    "createdAt": "2026-01-25T07:06:18.136Z",
+    "updatedAt": "2026-01-25T07:06:18.136Z",
+    "__v": 0
+  },
+  {
+    "_id": "699afea7c5b37b1f3cecbdf4",
+    "billData": {
+      "billSeries": "SR",
+      "billNo": "RET-104",
+      "billType": "GST 5%",
+      "godown": "Main Store",
+      "date": "2026-02-22T13:03:35.971Z",
+      "bankAccount": "",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "dia": "",
+        "eye": "",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 0,
+        "qty": 1,
+        "isInvoiced": false,
+        "salePrice": 200,
+        "discount": 0,
+        "totalAmount": 200,
+        "sellPrice": 0,
+        "combinationId": "698c1b738c48d517c32a5bd2",
+        "remark": "",
+        "_id": "699afea7c5b37b1f3cecbdf5"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 5,
+        "_id": "699afea7c5b37b1f3cecbdf6"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 5,
+        "_id": "699afea7c5b37b1f3cecbdf7"
+      }
+    ],
+    "grossAmount": 200,
+    "subtotal": 200,
+    "taxesAmount": 10,
+    "netAmount": 210,
+    "paidAmount": 200,
+    "dueAmount": 10,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-02-22T12:12:48.762Z",
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "time": "1:03:35 pm",
+    "createdAt": "2026-02-22T13:03:35.973Z",
+    "updatedAt": "2026-02-22T13:03:35.973Z",
+    "__v": 0
+  },
+  {
+    "_id": "699afee5c5b37b1f3cecc374",
+    "billData": {
+      "billSeries": "SR",
+      "billNo": "Auto",
+      "billType": "GST 5%",
+      "godown": "Main Store",
+      "date": "2026-02-22T13:04:37.277Z",
+      "bankAccount": "",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "Vikas",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": 0,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "Crizal",
+        "unit": "",
+        "dia": "",
+        "eye": "",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 0,
+        "qty": 10,
+        "isInvoiced": false,
+        "salePrice": 100,
+        "discount": 0,
+        "totalAmount": 1000,
+        "sellPrice": 0,
+        "combinationId": "",
+        "remark": "",
+        "_id": "699afee5c5b37b1f3cecc375"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 25,
+        "_id": "699afee5c5b37b1f3cecc376"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 25,
+        "_id": "699afee5c5b37b1f3cecc377"
+      }
+    ],
+    "grossAmount": 1000,
+    "subtotal": 1000,
+    "taxesAmount": 50,
+    "netAmount": 1050,
+    "paidAmount": 100,
+    "dueAmount": 950,
+    "orderQty": 10,
+    "usedQty": 0,
+    "balQty": 10,
+    "deliveryDate": "2026-02-22T12:12:48.762Z",
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "time": "1:04:37 pm",
+    "createdAt": "2026-02-22T13:04:37.282Z",
+    "updatedAt": "2026-02-22T13:04:37.282Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a53c176dd7c74851972c74",
+    "billData": {
+      "billSeries": "SR(26-27)",
+      "billNo": "1",
+      "date": "2026-03-02T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111",
+      "stateCode": "Maharashtra",
+      "creditLimit": 10000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "test3",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": 1,
+        "cyl": 1,
+        "axis": 180,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "salePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "69959c9f1288e9f513876edd",
+        "remark": "",
+        "_id": "69a53c176dd7c74851972c75"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a53c176dd7c74851972c76"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a53c176dd7c74851972c77"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "deliveryDate": "2026-03-02T06:01:25.954Z",
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalQty": 0,
+      "totalAmount": 0
+    },
+    "time": "12:58:23 pm",
+    "createdAt": "2026-03-02T07:28:23.964Z",
+    "updatedAt": "2026-03-02T07:28:23.964Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a5414566a7ed6183e0030d",
+    "billData": {
+      "billSeries": "SR(26-27)",
+      "billNo": "15641615",
+      "date": "2026-03-02T00:00:00.000Z",
+      "billType": "5",
+      "godown": "HO",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "shaharyaar zayer",
+      "address": "mumbai central",
+      "contactNumber": "9892100725",
+      "stateCode": "maha",
+      "creditLimit": 20000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "test3",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": 1,
+        "cyl": 1,
+        "axis": 180,
+        "add": 1,
+        "qty": 1,
+        "isInvoiced": false,
+        "salePrice": 100,
+        "discount": 0,
+        "totalAmount": 100,
+        "sellPrice": 0,
+        "combinationId": "69959c9f1288e9f513876edd",
+        "remark": "",
+        "_id": "69a5414566a7ed6183e0030e"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a5414566a7ed6183e0030f"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "meta": {
+          "_id": "697e0327fed94768bfa035c6",
+          "Name": "5",
+          "type": "goods",
+          "localTax1": 2.5,
+          "localTax2": 2.5,
+          "centralTax": 0,
+          "cessTax": 0,
+          "taxOnMRP": false,
+          "isDefault": true,
+          "remarks": "",
+          "createdAt": "2026-01-31T13:27:03.281Z",
+          "updatedAt": "2026-01-31T13:27:03.281Z",
+          "__v": 0
+        },
+        "_id": "69a5414566a7ed6183e00310"
+      }
+    ],
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "remark": "",
+    "status": "Pending",
+    "summary": {
+      "totalAmount": 0
+    },
+    "companyId": "699d38c830d447103770fbca",
+    "deliveryDate": "2026-03-02T07:50:29.977Z",
+    "time": "01:20 pm",
+    "createdAt": "2026-03-02T07:50:29.980Z",
+    "updatedAt": "2026-03-02T07:50:29.980Z",
+    "__v": 0
+  }
+]

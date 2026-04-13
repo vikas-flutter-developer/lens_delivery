@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "69b7ae547a9a4013f95262d8",
+    "name": "backup_manual_2026-03-16T07-16-36-108Z",
+    "type": "manual",
+    "status": "pending",
+    "storageLocation": "local",
+    "localPath": "C:\\Users\\ammar\\Downloads\\LensBackup\\LensBackup\\16032026\\backend\\backups\\manual\\backup_manual_2026-03-16T07-16-36-108Z.zip",
+    "createdAt": "2026-03-16T07:16:36.113Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b7b7a4a60905481fdede7c",
+    "name": "backup_manual_2026-03-16T07-56-20-441Z",
+    "type": "manual",
+    "status": "pending",
+    "storageLocation": "local",
+    "localPath": "C:\\Users\\ammar\\Downloads\\LensBackup\\LensBackup\\16032026\\backend\\backups\\manual\\backup_manual_2026-03-16T07-56-20-441Z.zip",
+    "createdAt": "2026-03-16T07:56:20.444Z",
+    "updatedAt": "2026-03-16T07:56:20.444Z",
+    "__v": 0
+  }
+]

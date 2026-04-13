@@ -1,0 +1,151 @@
+[
+  {
+    "_id": "69428f590c3d667ee34e3620",
+    "name": "JIGAR NARENDRA SHAH",
+    "email": "sadguruopticals2009@gmail.com",
+    "phone": "9930954458",
+    "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2025-12-17T11:09:13.724Z",
+    "updatedAt": "2025-12-17T11:09:13.724Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965db5d74a92cef4e79b404",
+    "name": "SADGURU EYE WEAR",
+    "email": "",
+    "phone": "8010969160",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [
+      "RETAIL"
+    ],
+    "createdAt": "2026-01-13T05:42:53.316Z",
+    "updatedAt": "2026-01-13T05:42:53.316Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965db6f74a92cef4e79b40b",
+    "name": "SADGURU KANDIVALI",
+    "email": "",
+    "phone": "9823512652",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-13T05:43:11.357Z",
+    "updatedAt": "2026-01-13T05:43:11.357Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965db8774a92cef4e79b419",
+    "name": "JITU OPTICS",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-13T05:43:35.045Z",
+    "updatedAt": "2026-01-13T05:43:35.045Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965db9474a92cef4e79bedf",
+    "name": "MISHAL SHAH",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-13T05:43:48.264Z",
+    "updatedAt": "2026-01-13T05:43:48.264Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965dba174a92cef4e79bee3",
+    "name": "SHUBHAM OPTICS",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-13T05:44:01.473Z",
+    "updatedAt": "2026-01-13T05:44:01.473Z",
+    "__v": 0
+  },
+  {
+    "_id": "697c970695c706fc63ccf51c",
+    "name": "ENTERPRISE COMPANY",
+    "email": "",
+    "phone": "",
+    "address": "MUMBAI",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-30T11:33:26.399Z",
+    "updatedAt": "2026-01-30T11:33:39.209Z",
+    "__v": 0
+  },
+  {
+    "_id": "697da5191dd160fd1f566949",
+    "name": "New Vendor",
+    "email": "vendor@example.com",
+    "phone": "9876543210",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-01-31T06:45:45.901Z",
+    "updatedAt": "2026-01-31T06:45:45.901Z",
+    "__v": 0
+  },
+  {
+    "_id": "6988273249f9d3f0020518b8",
+    "name": "AMITY",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [
+      "WHOLESALE"
+    ],
+    "createdAt": "2026-02-08T06:03:31.016Z",
+    "updatedAt": "2026-02-08T06:03:31.016Z",
+    "__v": 0
+  },
+  {
+    "_id": "699c464be14c3f8c07c61723",
+    "name": "Sadguru Opticals",
+    "email": "sadguruopticals2009@gmail.com",
+    "phone": "",
+    "address": "292 zhang di da ma lu",
+    "gstNo": "",
+    "remark": "",
+    "tags": [],
+    "createdAt": "2026-02-23T12:21:31.258Z",
+    "updatedAt": "2026-02-23T12:21:31.258Z",
+    "__v": 0
+  },
+  {
+    "_id": "699c47f8e14c3f8c07c618a1",
+    "name": "ABCD",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "gstNo": "",
+    "remark": "",
+    "tags": [
+      "RETAIL"
+    ],
+    "createdAt": "2026-02-23T12:28:40.402Z",
+    "updatedAt": "2026-02-23T12:28:40.402Z",
+    "__v": 0
+  }
+]

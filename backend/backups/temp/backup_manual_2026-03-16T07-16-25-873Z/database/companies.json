@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "699d38c830d447103770fbca",
+    "name": "Lens Master ERP",
+    "address": "123 Optic Street, Mumbai",
+    "contactPerson": "Ammar Ansari",
+    "phoneNumber": "919892100725",
+    "email": "ansariammar22@gmail.com",
+    "whatsapp_enabled": true,
+    "whatsapp_access_token": "PASTE_YOUR_META_TOKEN_HERE",
+    "whatsapp_phone_number_id": "PASTE_YOUR_PHONE_ID_HERE",
+    "whatsapp_business_number": "919892100725"
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "_id": "699bf69ffff6f46672bf656f",
+    "billData": {
+      "billSeries": "Exchange",
+      "billNo": "2",
+      "date": "2026-02-23T00:00:00.000Z",
+      "type": "Lens",
+      "godown": "MT-1",
+      "bookedBy": "Branding"
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458"
+    },
+    "exchangeOutItems": [
+      {
+        "code": "5fefde",
+        "itemName": "lens7",
+        "unit": "Pcs",
+        "dia": "",
+        "eye": "R/L",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "price": 100,
+        "totalAmount": 100,
+        "_id": "699bf69ffff6f46672bf6570"
+      }
+    ],
+    "exchangeInItems": [
+      {
+        "code": "a9e079",
+        "itemName": "test2",
+        "unit": "Pcs",
+        "dia": "",
+        "eye": "R/L",
+        "sph": 1,
+        "cyl": 1,
+        "axis": 180,
+        "add": 1,
+        "qty": 1,
+        "price": 100,
+        "totalAmount": 100,
+        "_id": "699bf69ffff6f46672bf6571"
+      }
+    ],
+    "totals": {
+      "totalExchInQty": 1,
+      "totalExchInAmnt": 100,
+      "totalExchOutQty": 1,
+      "totalExchOutAmnt": 100
+    },
+    "remarks": "",
+    "status": "Completed",
+    "createdAt": "2026-02-23T06:41:35.941Z",
+    "updatedAt": "2026-02-23T06:41:35.941Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b128f56f3a4f1a93eb06e5",
+    "billData": {
+      "billSeries": "Exchange",
+      "billNo": "3",
+      "date": "2026-03-11T00:00:00.000Z",
+      "type": "Lens",
+      "godown": "MT-1",
+      "bookedBy": "Branding"
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111"
+    },
+    "exchangeOutItems": [
+      {
+        "code": "5fefde",
+        "itemName": "lens7",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": -1,
+        "cyl": -1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "price": 300,
+        "totalAmount": 300,
+        "_id": "69b128f56f3a4f1a93eb06e6"
+      }
+    ],
+    "exchangeInItems": [
+      {
+        "code": "876edb",
+        "itemName": "test3",
+        "unit": "",
+        "dia": "",
+        "eye": "R/L",
+        "sph": 1,
+        "cyl": 1,
+        "axis": 1,
+        "add": 1,
+        "qty": 1,
+        "price": 200,
+        "totalAmount": 200,
+        "_id": "69b128f56f3a4f1a93eb06e7"
+      }
+    ],
+    "totals": {
+      "totalExchOutQty": 1,
+      "totalExchOutAmnt": 300,
+      "totalExchInQty": 1,
+      "totalExchInAmnt": 200
+    },
+    "remarks": "",
+    "status": "Completed",
+    "createdAt": "2026-03-11T08:33:57.596Z",
+    "updatedAt": "2026-03-12T09:13:27.291Z",
+    "__v": 0
+  }
+]

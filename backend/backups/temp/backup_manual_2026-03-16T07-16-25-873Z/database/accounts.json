@@ -1,0 +1,583 @@
+[
+  {
+    "_id": "693d1483882338cda090adc9",
+    "Name": "John Doe Updated",
+    "Alias": "JDU",
+    "PrintName": "John Doe Updated",
+    "AccountId": "ACC001",
+    "Groups": [
+      "VIP Customers"
+    ],
+    "Stations": [
+      "Main Terminal"
+    ],
+    "AccountDealerType": "unregisterd",
+    "GSTIN": "",
+    "Transporter": "Local Express",
+    "ContactPerson": "John Doe",
+    "OpeningBalance": {
+      "balance": 2000,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 1000,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 10000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "456 Second St",
+    "State": "Maharashtra",
+    "Email": "john_updated@example.com",
+    "TelNumber": "022-1234567",
+    "MobileNumber": "9876543211",
+    "Pincode": "400002",
+    "Distance": "2km",
+    "ItPlan": "Premium",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "N",
+    "Ex1": "",
+    "DayLimit": "60",
+    "createdAt": "2025-12-13T07:23:47.728Z",
+    "updatedAt": "2026-03-16T07:12:47.530Z",
+    "__v": 1,
+    "AccountType": "Sale",
+    "Password": "newpass123",
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "695e2ee7bac6152605a1807f",
+    "Name": "Abhishek Trivedi",
+    "Alias": "Abhishek Trivedi",
+    "PrintName": "Abhishek Trivedi",
+    "AccountId": "2026",
+    "Groups": [
+      "demo group of acount"
+    ],
+    "Stations": [
+      "Charni Road"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "23456789876543",
+    "Transporter": "",
+    "ContactPerson": "Abhishek Trivedi",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 10000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "category1",
+    "CardNumber": "",
+    "Address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+    "State": "Maharashtra",
+    "Email": "abhi@gmail.com",
+    "TelNumber": "",
+    "MobileNumber": "09527255111",
+    "Pincode": "401202",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "",
+    "createdAt": "2026-01-07T10:01:11.120Z",
+    "updatedAt": "2026-01-27T05:35:29.125Z",
+    "__v": 0,
+    "AccountType": "Sale",
+    "Password": "abhi",
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "695ed3a6fffd963de0d981c3",
+    "Name": "shaharyaar zayer",
+    "Alias": "shahar",
+    "PrintName": "Shaharyaar",
+    "AccountId": "12345678",
+    "Groups": [
+      "shahar group"
+    ],
+    "Stations": [
+      "Mumbai Central"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "shaharyaar zayer",
+    "OpeningBalance": {
+      "balance": 100000,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 10000,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 20000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "mumbai central",
+    "State": "maha",
+    "Email": "vikassalvi693@gmail.com",
+    "TelNumber": "",
+    "MobileNumber": "9892100725",
+    "Pincode": "400007",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": 765432,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "100000",
+    "createdAt": "2026-01-07T21:44:06.814Z",
+    "updatedAt": "2026-02-27T11:39:29.466Z",
+    "__v": 0,
+    "AccountType": "Purchase",
+    "Password": "",
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "6965dc9874a92cef4e7a0222",
+    "Name": "ENTERPRISE",
+    "Alias": "",
+    "PrintName": "ENTERPRISE",
+    "AccountId": "123456",
+    "Groups": [
+      "WHOLESALE"
+    ],
+    "Stations": [
+      "DELHI"
+    ],
+    "AccountDealerType": "unregisterd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 0,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "",
+    "State": "DELHI",
+    "Email": "",
+    "TelNumber": "",
+    "MobileNumber": "",
+    "Pincode": "",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "",
+    "createdAt": "2026-01-13T05:48:08.064Z",
+    "updatedAt": "2026-01-13T05:48:08.064Z",
+    "__v": 0,
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "697db02a1dd160fd1f5681c7",
+    "Name": "yash",
+    "Alias": "",
+    "PrintName": "yash",
+    "AccountId": "20004",
+    "Groups": [
+      "WHOLESALE"
+    ],
+    "Stations": [
+      "Marine Lines"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 0,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "",
+    "State": "maharashtra",
+    "Email": "",
+    "TelNumber": "",
+    "MobileNumber": "",
+    "Pincode": "",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "",
+    "AccountType": "Both",
+    "Password": "",
+    "createdAt": "2026-01-31T07:32:58.375Z",
+    "updatedAt": "2026-01-31T07:32:58.375Z",
+    "__v": 0,
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "697db3801dd160fd1f568ce5",
+    "Name": "Test Opticals 01",
+    "Alias": "",
+    "PrintName": "Test Opticals 01",
+    "AccountId": "9876543210",
+    "Groups": [
+      "RETAILER"
+    ],
+    "Stations": [
+      "Main"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "Test Opticals 01",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 0,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "",
+    "State": "Maharashtra",
+    "Email": "test.opticals.01@example.com",
+    "TelNumber": "",
+    "MobileNumber": "9876543210",
+    "Pincode": "",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "",
+    "AccountType": "Both",
+    "Password": "password123",
+    "createdAt": "2026-01-31T07:47:12.727Z",
+    "updatedAt": "2026-01-31T07:47:12.727Z",
+    "__v": 0,
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "6985884603a23169005bb6ca",
+    "Name": "SADGURU EYE WEAR",
+    "Alias": "",
+    "PrintName": "SADGURU EYE WEAR",
+    "AccountId": "25189",
+    "Groups": [
+      "RETAIL"
+    ],
+    "Stations": [
+      "Kandivali"
+    ],
+    "AccountDealerType": "unregisterd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "MR MITUL GANDHI",
+    "OpeningBalance": {
+      "balance": 5000,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 50000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "A/001 DHURI CAMPUS 100 FEET ROAD SUN CITY",
+    "State": "Maharashtra",
+    "Email": "JIGS59875@GMAIL.COM",
+    "TelNumber": "",
+    "MobileNumber": "9930954458",
+    "Pincode": "401202",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "60",
+    "AccountType": "Sale",
+    "Password": "branding",
+    "createdAt": "2026-02-06T06:20:54.978Z",
+    "updatedAt": "2026-02-06T06:20:54.978Z",
+    "__v": 0,
+    "companyId": "699d38c830d447103770fbca"
+  },
+  {
+    "_id": "69a2ac287b300b6ba83e3901",
+    "Name": "Testing",
+    "Alias": "",
+    "PrintName": "Testing",
+    "AccountId": "Tes123",
+    "Groups": [
+      "RETAIL"
+    ],
+    "Stations": [
+      "Mumbai Central"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 0,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "",
+    "State": "Maharashtra",
+    "Email": "tes@gmail.com",
+    "TelNumber": "",
+    "MobileNumber": "9876544321",
+    "Pincode": "",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "",
+    "AccountType": "Sale",
+    "Password": "Tes123",
+    "companyId": null,
+    "createdAt": "2026-02-28T08:49:44.733Z",
+    "updatedAt": "2026-02-28T08:49:44.733Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b3a12ef717523749b158d0",
+    "Name": "Ammar",
+    "Alias": "",
+    "PrintName": "ammar",
+    "AccountId": "ammar123",
+    "Groups": [
+      "RETAIL"
+    ],
+    "Stations": [
+      "Kurla"
+    ],
+    "AccountDealerType": "Registerd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 1000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "3rd Floor, VB Nagar, LIG Colony, Kurla(w)",
+    "State": "Maharashtra",
+    "Email": "ansariammar22@gmail.com",
+    "TelNumber": "",
+    "MobileNumber": "9819209198",
+    "Pincode": "400070",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "1",
+    "AccountType": "Purchase",
+    "Password": "",
+    "companyId": null,
+    "createdAt": "2026-03-13T05:31:26.367Z",
+    "updatedAt": "2026-03-13T05:31:26.367Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b7ac32c38fefac34f0dafb",
+    "Name": "Test Account",
+    "Alias": "Test",
+    "PrintName": "Test Account",
+    "AccountId": "999999",
+    "Groups": [
+      "demo group of acount"
+    ],
+    "Stations": [
+      "Vasai Road"
+    ],
+    "AccountDealerType": "unregisterd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "Test Person",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 10000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "Test Address",
+    "State": "Maharashtra",
+    "Email": "test9999@example.com",
+    "TelNumber": "",
+    "MobileNumber": "9999999999",
+    "Pincode": "401202",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "45",
+    "AccountType": "Sale",
+    "Password": "password123",
+    "companyId": null,
+    "createdAt": "2026-03-16T07:07:30.149Z",
+    "updatedAt": "2026-03-16T07:07:30.149Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b7ad82c38fefac34f0db14",
+    "Name": "Test Account",
+    "Alias": "Test",
+    "PrintName": "Test Account",
+    "AccountId": "99999",
+    "Groups": [
+      "demo group of acount"
+    ],
+    "Stations": [
+      "Vasai Road"
+    ],
+    "AccountDealerType": "unregisterd",
+    "GSTIN": "",
+    "Transporter": "",
+    "ContactPerson": "Test Person",
+    "OpeningBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "PreviousYearBalance": {
+      "balance": 0,
+      "type": "Dr"
+    },
+    "CurrentBalance": {
+      "type": "Dr",
+      "amount": 0
+    },
+    "CreditLimit": 10000,
+    "EnableLoyality": "Y",
+    "AccountCategory": "default",
+    "CardNumber": "",
+    "Address": "Test Address",
+    "State": "Maharashtra",
+    "Email": "test9999@example.com",
+    "TelNumber": "",
+    "MobileNumber": "9999999999",
+    "Pincode": "401202",
+    "Distance": "",
+    "ItPlan": "",
+    "LstNumber": null,
+    "CstNumber": null,
+    "AdharCardNumber": null,
+    "Dnd": "",
+    "Ex1": "",
+    "DayLimit": "45",
+    "AccountType": "Sale",
+    "Password": "password123",
+    "companyId": null,
+    "createdAt": "2026-03-16T07:13:06.114Z",
+    "updatedAt": "2026-03-16T07:13:06.114Z",
+    "__v": 0
+  }
+]

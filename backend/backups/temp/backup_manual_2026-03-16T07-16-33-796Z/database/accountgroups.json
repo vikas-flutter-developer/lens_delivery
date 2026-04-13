@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "6965dbdf74a92cef4e79d47a",
+    "accountGroupName": "RETAIL",
+    "primaryGroup": "Y",
+    "LedgerGroup": "RETAIL",
+    "createdAt": "2026-01-13T05:45:03.861Z",
+    "updatedAt": "2026-01-13T05:45:03.861Z",
+    "__v": 0
+  },
+  {
+    "_id": "6965dbf274a92cef4e79e5d7",
+    "accountGroupName": "WHOLESALE",
+    "primaryGroup": "Y",
+    "LedgerGroup": "WHOLESALE",
+    "createdAt": "2026-01-13T05:45:22.018Z",
+    "updatedAt": "2026-01-13T05:45:22.018Z",
+    "__v": 0
+  },
+  {
+    "_id": "698dd71ba0ae9a3623de4d6f",
+    "accountGroupName": "IMPORTER",
+    "primaryGroup": "Y",
+    "LedgerGroup": "IMPORTER",
+    "createdAt": "2026-02-12T13:35:23.987Z",
+    "updatedAt": "2026-02-28T09:44:42.226Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a80970fcac247bae6e5e75",
+    "accountGroupName": "OptoNovaplus",
+    "primaryGroup": "Y",
+    "LedgerGroup": "on+",
+    "createdAt": "2026-03-04T10:29:04.528Z",
+    "updatedAt": "2026-03-04T10:29:04.528Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Branding",
+    "email": "branding@gmail.com",
+    "role": "admin",
+    "company": "Lens Master ERP",
+    "active": true
+  },
+  {
+    "name": "Test User",
+    "email": "ansariammar22@gmail.com",
+    "role": "admin",
+    "company": "System Admin",
+    "active": true
+  },
+  {
+    "name": "Admin",
+    "email": "admin@lenstrail.com",
+    "role": "admin",
+    "company": "Lens Master ERP"
+  },
+  {
+    "name": "New User",
+    "email": "newuser@example.com",
+    "role": "employee",
+    "company": "Lens Master ERP"
+  },
+  {
+    "name": "New User",
+    "email": "tester_june_2026@example.com",
+    "role": "employee",
+    "company": "Lens Master ERP"
+  },
+  {
+    "name": "New User",
+    "email": "new@example.com",
+    "role": "employee",
+    "company": "N/A"
+  },
+  {
+    "name": "New User",
+    "email": "tester@example.com",
+    "role": "employee",
+    "company": "Lens Master ERP"
+  },
+  {
+    "name": "New User",
+    "email": "new1@example.com",
+    "role": "employee",
+    "company": "N/A"
+  },
+  {
+    "name": "Master Admin",
+    "email": "superadmin@lens.com",
+    "role": "super_admin",
+    "company": "System Admin",
+    "active": true
+  }
+]

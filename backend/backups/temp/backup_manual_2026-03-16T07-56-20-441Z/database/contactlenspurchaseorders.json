@@ -1,0 +1,626 @@
+[
+  {
+    "_id": "69930852d32c328bd588b423",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "1",
+      "date": "2026-02-16T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111",
+      "stateCode": "Maharashtra",
+      "creditLimit": 10000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": "2026-02-01T00:00:00.000Z",
+        "expiryDate": "2026-02-16T00:00:00.000Z",
+        "mrp": 0,
+        "purchasePrice": 0,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "isInvoiced": false,
+        "isChallaned": false,
+        "remark": "",
+        "vendor": "",
+        "combinationId": "",
+        "orderNo": "",
+        "eye": "-1",
+        "sph": "-1",
+        "cyl": "1",
+        "axis": "1",
+        "add": "1",
+        "_id": "69930852d32c328bd588b424"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "69930852d32c328bd588b425"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "69930852d32c328bd588b426"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "deliveryDate": "2026-02-16T12:06:42.934Z",
+    "remark": "",
+    "status": "Pending",
+    "time": "5:36:42 pm",
+    "usedIn": [],
+    "createdAt": "2026-02-16T12:06:42.969Z",
+    "updatedAt": "2026-02-16T12:06:42.969Z",
+    "__v": 0
+  },
+  {
+    "_id": "6994156947a193fe9665fa68",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "1",
+      "date": "2026-02-17T00:00:00.000Z",
+      "billType": "5",
+      "bankAccount": "",
+      "godown": "Main Store",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": "2026-02-01T00:00:00.000Z",
+        "expiryDate": "2026-02-17T00:00:00.000Z",
+        "mrp": 0,
+        "purchasePrice": 100,
+        "salePrice": 1000,
+        "discount": 0,
+        "totalAmount": 100,
+        "isInvoiced": false,
+        "isChallaned": false,
+        "remark": "",
+        "vendor": "",
+        "combinationId": "",
+        "orderNo": "4",
+        "eye": "-1",
+        "sph": "-1",
+        "cyl": "1",
+        "axis": "1",
+        "add": "1",
+        "_id": "6994bcff1a357375d0b23896"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "6994bcff1a357375d0b23897"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "6994bcff1a357375d0b23898"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 0,
+    "netAmount": 100,
+    "paidAmount": 0,
+    "dueAmount": 100,
+    "deliveryDate": "2026-02-17T07:14:49.226Z",
+    "remark": "",
+    "status": "Pending",
+    "sourceSaleId": "69940ba9695836287d00f923",
+    "time": "12:44:49 pm",
+    "usedIn": [],
+    "createdAt": "2026-02-17T07:14:49.248Z",
+    "updatedAt": "2026-02-17T19:09:51.864Z",
+    "__v": 2
+  },
+  {
+    "_id": "69958ccf1288e9f5137e3d13",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "2",
+      "date": "2026-02-18T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": null,
+        "expiryDate": null,
+        "mrp": 0,
+        "purchasePrice": 100,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 100,
+        "isInvoiced": false,
+        "isChallaned": false,
+        "remark": "",
+        "vendor": "",
+        "combinationId": "6994a6b24021b9d15657814b",
+        "orderNo": "",
+        "eye": "R/L",
+        "sph": "-1",
+        "cyl": "-1",
+        "axis": "1",
+        "add": "1",
+        "_id": "69958d111288e9f5137ec437"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 3,
+        "amount": 3,
+        "_id": "69958d111288e9f5137ec438"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 3,
+        "amount": 3,
+        "_id": "69958d111288e9f5137ec439"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 6,
+    "netAmount": 106,
+    "paidAmount": 0,
+    "dueAmount": 106,
+    "deliveryDate": "2026-02-18T09:56:31.003Z",
+    "remark": "",
+    "status": "Pending",
+    "sourceSaleId": "",
+    "time": "3:26:31 pm",
+    "usedIn": [],
+    "createdAt": "2026-02-18T09:56:31.023Z",
+    "updatedAt": "2026-02-18T09:57:37.085Z",
+    "__v": 1
+  },
+  {
+    "_id": "69959a3c1288e9f51386ad6d",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "",
+      "date": "2026-02-18T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": "",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "Ammar",
+      "address": "",
+      "contactNumber": "",
+      "stateCode": "",
+      "creditLimit": null,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": "2026-02-01T00:00:00.000Z",
+        "expiryDate": "2026-02-17T00:00:00.000Z",
+        "mrp": 0,
+        "purchasePrice": 0,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "isInvoiced": false,
+        "isChallaned": false,
+        "remark": "",
+        "vendor": "",
+        "combinationId": "",
+        "orderNo": "1",
+        "eye": "",
+        "sph": "",
+        "cyl": "",
+        "axis": "",
+        "add": "",
+        "_id": "69959a3c1288e9f51386ad6e"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "69959a3c1288e9f51386ad6f"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "69959a3c1288e9f51386ad70"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "deliveryDate": "2026-02-18T10:53:48.618Z",
+    "remark": "",
+    "status": "Cancelled",
+    "sourceSaleId": "6994093f695836287d002f4d",
+    "time": "4:23:48 pm",
+    "usedIn": [],
+    "createdAt": "2026-02-18T10:53:48.629Z",
+    "updatedAt": "2026-03-10T09:07:42.814Z",
+    "__v": 0
+  },
+  {
+    "_id": "69996c6717f10bdf45d5d057",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "2",
+      "date": "2026-02-21T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "Abhishek Trivedi",
+      "address": "Veer Sawaekar Nagar\nA/18 Nutan Niwas",
+      "contactNumber": "09527255111",
+      "stateCode": "Maharashtra",
+      "creditLimit": 10000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": "2026-02-03T00:00:00.000Z",
+        "expiryDate": "2026-02-28T00:00:00.000Z",
+        "mrp": 90,
+        "purchasePrice": 100,
+        "salePrice": 0,
+        "discount": 5,
+        "totalAmount": 95,
+        "isInvoiced": true,
+        "isChallaned": true,
+        "remark": "",
+        "vendor": "sadguru opticals",
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "orderNo": "",
+        "eye": "R/L",
+        "sph": "-1",
+        "cyl": "-1",
+        "axis": "1",
+        "add": "1",
+        "itemStatus": "Done",
+        "_id": "69996c6717f10bdf45d5d058"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.38,
+        "_id": "69996c6717f10bdf45d5d059"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.38,
+        "_id": "69996c6717f10bdf45d5d05a"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 1,
+    "balQty": 0,
+    "grossAmount": 100,
+    "subtotal": 95,
+    "taxesAmount": 4.76,
+    "netAmount": 99.76,
+    "paidAmount": 0,
+    "dueAmount": 99.76,
+    "deliveryDate": "2026-02-21T08:27:19.865Z",
+    "remark": "",
+    "status": "Done",
+    "parentStatus": "In Progress",
+    "sourceSaleId": "",
+    "usageHistory": [
+      {
+        "challanId": "6999704ca1e5ecaadd74edf8",
+        "billNo": "2",
+        "series": "CLPO",
+        "qtyUsed": 1,
+        "date": "2026-02-21T08:43:56.830Z",
+        "_id": "6999704ca1e5ecaadd74ee01"
+      }
+    ],
+    "time": "1:57:19 pm",
+    "usedIn": [
+      {
+        "type": "PC",
+        "number": "2",
+        "_id": "6999704ca1e5ecaadd74ee02"
+      }
+    ],
+    "createdAt": "2026-02-21T08:27:19.871Z",
+    "updatedAt": "2026-02-21T08:44:08.036Z",
+    "__v": 1
+  },
+  {
+    "_id": "69999d909af86864bf8649bd",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "1",
+      "date": "2026-02-21T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": "Branding",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "shaharyaar zayer",
+      "address": "mumbai central",
+      "contactNumber": "9819209198",
+      "stateCode": "maha",
+      "creditLimit": 20000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens3",
+        "unit": "",
+        "qty": 10,
+        "importDate": "2026-02-02T00:00:00.000Z",
+        "expiryDate": "2026-02-24T00:00:00.000Z",
+        "mrp": 0,
+        "purchasePrice": 100,
+        "salePrice": 200,
+        "discount": 0,
+        "totalAmount": 1000,
+        "isInvoiced": false,
+        "isChallaned": true,
+        "remark": "",
+        "vendor": "",
+        "combinationId": "698c1b738c48d517c32a5c12",
+        "orderNo": "6",
+        "eye": "R",
+        "sph": "1",
+        "cyl": "-1",
+        "axis": "1",
+        "add": "1",
+        "itemStatus": "In Progress",
+        "_id": "69999d909af86864bf8649be"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 25,
+        "_id": "69999d909af86864bf8649bf"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 25,
+        "_id": "69999d909af86864bf8649c0"
+      }
+    ],
+    "orderQty": 10,
+    "usedQty": 10,
+    "balQty": 0,
+    "grossAmount": 1000,
+    "subtotal": 1000,
+    "taxesAmount": 50,
+    "netAmount": 1050,
+    "paidAmount": 0,
+    "dueAmount": 1050,
+    "deliveryDate": "2026-02-21T11:57:04.700Z",
+    "remark": "",
+    "status": "In Progress",
+    "parentStatus": "In Progress",
+    "sourceSaleId": "69999d559af86864bf85e924",
+    "usageHistory": [
+      {
+        "challanId": "69999d9b9af86864bf864d13",
+        "billNo": "4",
+        "series": "CLPO",
+        "qtyUsed": 10,
+        "date": "2026-02-21T11:57:15.546Z",
+        "_id": "69999d9b9af86864bf864d1c"
+      }
+    ],
+    "time": "5:27:04 pm",
+    "usedIn": [
+      {
+        "type": "PC",
+        "number": "4",
+        "_id": "69999d9b9af86864bf864d1d"
+      }
+    ],
+    "createdAt": "2026-02-21T11:57:04.704Z",
+    "updatedAt": "2026-02-21T11:57:15.547Z",
+    "__v": 1
+  },
+  {
+    "_id": "699be05abdb61563d32b02ef",
+    "billData": {
+      "billSeries": "CLPO",
+      "billNo": "3",
+      "date": "2026-02-23T00:00:00.000Z",
+      "billType": "5",
+      "godown": "Main Store",
+      "bookedBy": "Branding"
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "lens7",
+        "unit": "",
+        "qty": 1,
+        "importDate": "2026-02-16T00:00:00.000Z",
+        "expiryDate": "2026-02-23T00:00:00.000Z",
+        "mrp": 0,
+        "purchasePrice": 100,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 100,
+        "isInvoiced": false,
+        "isChallaned": false,
+        "remark": "testing5",
+        "vendor": "shaharyaar zayer",
+        "combinationId": "6998439be6a9b06b0f08713f",
+        "orderNo": "",
+        "eye": "R/L",
+        "sph": "-1",
+        "cyl": "-1",
+        "axis": "1",
+        "add": "1",
+        "itemStatus": "Pending",
+        "_id": "69ae67f2de53d0e11a86c5a2"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "_id": "69ae67f2de53d0e11a86c5a3"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 2.5,
+        "_id": "69ae67f2de53d0e11a86c5a4"
+      }
+    ],
+    "orderQty": 1,
+    "usedQty": 0,
+    "balQty": 1,
+    "grossAmount": 100,
+    "subtotal": 100,
+    "taxesAmount": 5,
+    "netAmount": 105,
+    "paidAmount": 0,
+    "dueAmount": 105,
+    "deliveryDate": "2026-02-23T05:06:34.185Z",
+    "remark": "",
+    "status": "Cancelled",
+    "parentStatus": "Pending",
+    "sourceSaleId": "",
+    "usageHistory": [],
+    "time": "10:36:34 am",
+    "usedIn": [],
+    "createdAt": "2026-02-23T05:06:34.209Z",
+    "updatedAt": "2026-03-10T06:47:42.832Z",
+    "__v": 4
+  }
+]

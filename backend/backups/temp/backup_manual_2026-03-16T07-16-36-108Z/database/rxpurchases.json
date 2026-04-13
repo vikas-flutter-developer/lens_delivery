@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "697af5643431277a42534fd4",
+    "billData": {
+      "billSeries": "1235",
+      "billNo": "123123",
+      "date": "2026-01-29T00:00:00.000Z",
+      "billType": "GST 5%",
+      "godown": "kljnlkj",
+      "bookedBy": "kjklj",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "CR KT HMC",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 2.5,
+        "qty": 10,
+        "purchasePrice": 0,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "sellPrice": 0,
+        "remark": "",
+        "vendor": null,
+        "refId": 0,
+        "combinationId": "69304f480640d4b993bcbf3c",
+        "_id": "697af55c3431277a42534fcc"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "697af5643431277a42534fd6"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 5,
+        "amount": 0,
+        "_id": "697af5643431277a42534fd7"
+      }
+    ],
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "remark": "",
+    "summary": {
+      "totalQty": 10,
+      "totalAmount": 0
+    },
+    "status": "Pending",
+    "createdAt": "2026-01-29T05:51:32.189Z",
+    "updatedAt": "2026-01-29T05:51:32.189Z",
+    "__v": 0
+  },
+  {
+    "_id": "697af6ab3431277a425358c2",
+    "billData": {
+      "billSeries": "1235",
+      "billNo": "123123",
+      "date": "2026-01-29T00:00:00.000Z",
+      "billType": "GST 5%",
+      "godown": "kljnlkj",
+      "bookedBy": "kjklj",
+      "bankAccount": ""
+    },
+    "partyData": {
+      "partyAccount": "sadguru opticals",
+      "address": "102, KANTI NX , LAL GODOWN , OPP NORTH LANE MALL ,\nVASAI ROAD WEST",
+      "contactNumber": "9930954458",
+      "stateCode": "Maharashtra",
+      "creditLimit": 25000,
+      "CurrentBalance": {
+        "amount": 0,
+        "type": "Dr"
+      }
+    },
+    "items": [
+      {
+        "barcode": "",
+        "itemName": "CR KT HMC",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 2.5,
+        "qty": 10,
+        "purchasePrice": 0,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "sellPrice": 0,
+        "remark": "",
+        "vendor": null,
+        "refId": 0,
+        "combinationId": "69304f480640d4b993bcbf3c",
+        "_id": "697af55c3431277a42534fcc"
+      },
+      {
+        "barcode": "",
+        "itemName": "CR KT HC +3.00 SPH",
+        "unit": "",
+        "dia": "",
+        "eye": "RL",
+        "sph": 0,
+        "cyl": 0,
+        "axis": 0,
+        "add": 2.5,
+        "qty": 20,
+        "purchasePrice": 0,
+        "salePrice": 0,
+        "discount": 0,
+        "totalAmount": 0,
+        "sellPrice": 0,
+        "remark": "",
+        "vendor": null,
+        "refId": 0,
+        "combinationId": "69304d850640d4b993bcbbc6",
+        "_id": "697af69a3431277a425358b9"
+      }
+    ],
+    "taxes": [
+      {
+        "taxName": "CGST",
+        "type": "Additive",
+        "percentage": 2.5,
+        "amount": 0,
+        "_id": "697af6ab3431277a425358c5"
+      },
+      {
+        "taxName": "SGST",
+        "type": "Additive",
+        "percentage": 5,
+        "amount": 0,
+        "_id": "697af6ab3431277a425358c6"
+      }
+    ],
+    "grossAmount": 0,
+    "subtotal": 0,
+    "taxesAmount": 0,
+    "netAmount": 0,
+    "paidAmount": 0,
+    "dueAmount": 0,
+    "remark": "",
+    "summary": {
+      "totalQty": 30,
+      "totalAmount": 0
+    },
+    "status": "Pending",
+    "createdAt": "2026-01-29T05:56:59.033Z",
+    "updatedAt": "2026-01-29T05:56:59.033Z",
+    "__v": 0
+  }
+]

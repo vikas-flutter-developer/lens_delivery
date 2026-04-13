@@ -1,0 +1,4753 @@
+{
+  "info": {
+    "name": "Lens Backup API Collection",
+    "description": "Complete API Testing Collection for Lens Backup System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Customer Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"customer@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customer/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create User (Admin Only)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New User\",\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"employee\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/admin/create-user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "admin",
+                "create-user"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get User Data (Admin Only)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/auth/admin/userdata",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "admin",
+                "userdata"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Change Password (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"oldPassword\": \"oldpass123\",\n  \"newPassword\": \"newpass123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/admin/change-pass",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "admin",
+                "change-pass"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/auth/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "Get Customer Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{customer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/customer/profile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "profile"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Customer Password",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{customer_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"oldPassword\": \"oldpass123\",\n  \"newPassword\": \"newpass123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customer/change-password",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "change-password"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Customer Ledger (GET)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{customer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/customer/ledger",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "ledger"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Customer Ledger (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{customer_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"startDate\": \"2024-01-01\",\n  \"endDate\": \"2024-12-31\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customer/ledger",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "ledger"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Customer Balance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{customer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/customer/balance",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "customer",
+                "balance"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Groups",
+      "item": [
+        {
+          "name": "Add Group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Group\",\n  \"description\": \"Group Description\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/groups/add-group",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "groups",
+                "add-group"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Groups",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/groups/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "groups",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Group By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/groups/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "groups",
+                "{{group_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Group\",\n  \"description\": \"Updated Description\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/groups/update/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "groups",
+                "update",
+                "{{group_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Group",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/groups/delete/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "groups",
+                "delete",
+                "{{group_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "item": [
+        {
+          "name": "Add Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Item\",\n  \"description\": \"Item Description\",\n  \"code\": \"ITEM001\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/items/add-item",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "items",
+                "add-item"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Items",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/items/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "items",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Item By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/items/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "items",
+                "{{item_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Item\",\n  \"description\": \"Updated Description\",\n  \"code\": \"ITEM001\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/items/update/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "items",
+                "update",
+                "{{item_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Item",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/items/delete/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "items",
+                "delete",
+                "{{item_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Barcodes",
+      "item": [
+        {
+          "name": "Save Barcode Data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"barcode\": \"LENS-12345\",\n  \"productId\": \"{{product_id}}\",\n  \"sph\": -2.25,\n  \"cyl\": -0.50,\n  \"axis\": 180,\n  \"add\": 2.00,\n  \"allowOverwrite\": true,\n  \"metadata\": {\n    \"scanner_id\": \"DEVICE-001\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/barcodes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "barcodes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Bulk Save Barcodes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scans\": [\n    {\n      \"barcode\": \"B001\",\n      \"productId\": \"{{product_id}}\",\n      \"sph\": -1.00\n    },\n    {\n      \"barcode\": \"B002\",\n      \"productId\": \"{{product_id}}\",\n      \"sph\": -1.25\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/barcodes/bulk",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "barcodes",
+                "bulk"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Barcode Data",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/barcodes/{{barcode_number}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "barcodes",
+                "{{barcode_number}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Accounts",
+      "item": [
+        {
+          "name": "Add Account",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"John Doe\",\n  \"Alias\": \"JD\",\n  \"PrintName\": \"John Doe\",\n  \"AccountId\": \"ACC001\",\n  \"Groups\": [\"Retail Customers\"],\n  \"Stations\": [\"Main Terminal\"],\n  \"AccountDealerType\": \"unregisterd\",\n  \"GSTIN\": \"\",\n  \"Transporter\": \"Local Express\",\n  \"ContactPerson\": \"John Doe\",\n  \"OpeningBalance_balance\": 1000,\n  \"OpeningBalance_type\": \"Dr\",\n  \"PreviousYearBalance_balance\": 500,\n  \"PreviousYearBalance_type\": \"Dr\",\n  \"CreditLimit\": 5000,\n  \"EnableLoyality\": \"Y\",\n  \"AccountCategory\": \"Retail\",\n  \"CardNumber\": \"\",\n  \"Address\": \"123 Main St\",\n  \"State\": \"Maharashtra\",\n  \"Email\": \"john@example.com\",\n  \"TelNumber\": \"022-1234567\",\n  \"MobileNumber\": \"9876543210\",\n  \"Pincode\": \"400001\",\n  \"Distance\": \"5km\",\n  \"ItPlan\": \"Regular\",\n  \"LstNumber\": null,\n  \"CstNumber\": null,\n  \"AdharCardNumber\": null,\n  \"Dnd\": \"N\",\n  \"Ex1\": \"\",\n  \"DayLimit\": \"30\",\n  \"AccountType\": \"Both\",\n  \"Password\": \"pass123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/accounts/add-account",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "add-account"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Accounts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/accounts/getallaccounts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "getallaccounts"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Account By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/accounts/get/{{account_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "get",
+                "{{account_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Account",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"John Doe Updated\",\n  \"Alias\": \"JDU\",\n  \"PrintName\": \"John Doe Updated\",\n  \"AccountId\": \"ACC001\",\n  \"Groups\": [\"VIP Customers\"],\n  \"Stations\": [\"Main Terminal\"],\n  \"AccountDealerType\": \"unregisterd\",\n  \"GSTIN\": \"\",\n  \"Transporter\": \"Local Express\",\n  \"ContactPerson\": \"John Doe\",\n  \"OpeningBalance_balance\": 2000,\n  \"OpeningBalance_type\": \"Dr\",\n  \"PreviousYearBalance_balance\": 1000,\n  \"PreviousYearBalance_type\": \"Dr\",\n  \"CreditLimit\": 10000,\n  \"EnableLoyality\": \"Y\",\n  \"AccountCategory\": \"Retail\",\n  \"CardNumber\": \"\",\n  \"Address\": \"456 Second St\",\n  \"State\": \"Maharashtra\",\n  \"Email\": \"john_updated@example.com\",\n  \"TelNumber\": \"022-1234567\",\n  \"MobileNumber\": \"9876543211\",\n  \"Pincode\": \"400002\",\n  \"Distance\": \"2km\",\n  \"ItPlan\": \"Premium\",\n  \"LstNumber\": null,\n  \"CstNumber\": null,\n  \"AdharCardNumber\": null,\n  \"Dnd\": \"N\",\n  \"Ex1\": \"\",\n  \"DayLimit\": \"60\",\n  \"AccountType\": \"Both\",\n  \"Password\": \"newpass123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/accounts/update/{{account_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "update",
+                "{{account_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Account",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/accounts/delete/{{account_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "delete",
+                "{{account_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Account Groups",
+      "item": [
+        {
+          "name": "Add Account Group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Account Group\",\n  \"parentGroupId\": \"{{parent_group_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/account-groups/add-account-group",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "account-groups",
+                "add-account-group"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Account Groups",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/account-groups/get-all-account-groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "account-groups",
+                "get-all-account-groups"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Account Group By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/account-groups/get/{{account_group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "account-groups",
+                "get",
+                "{{account_group_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Account Group",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Account Group\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/account-groups/update/{{account_group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "account-groups",
+                "update",
+                "{{account_group_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Account Group",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/account-groups/delete/{{account_group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "account-groups",
+                "delete",
+                "{{account_group_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tax Categories",
+      "item": [
+        {
+          "name": "Add Tax Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"GST\",\n  \"percentage\": 18\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tax/add-taxCategory",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "add-taxCategory"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Tax Categories",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tax/getAllTaxCategories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "getAllTaxCategories"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Tax Category By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tax/getTaxCategoryById",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "getTaxCategoryById"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Tax Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{tax_category_id}}\",\n  \"name\": \"GST\",\n  \"percentage\": 18\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tax/edit-taxCategory",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "edit-taxCategory"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Tax Category",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tax/deleteTaxCategory",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "deleteTaxCategory"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vendors",
+      "item": [
+        {
+          "name": "Add Vendor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Standard Optical Supplies\",\n  \"email\": \"contact@standardoptical.com\",\n  \"phone\": \"9820012345\",\n  \"address\": \"Industrial Area, Phase 2, Mumbai\",\n  \"gstNo\": \"27AAAAA0000A1Z5\",\n  \"remark\": \"Primary lens supplier\",\n  \"tags\": [\"Wholesale\", \"Local\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/vendor/addVendor",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vendor",
+                "addVendor"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Vendors",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/vendor/getAllVendors",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vendor",
+                "getAllVendors"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Vendor By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/vendor/getVendorById",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vendor",
+                "getVendorById"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Vendor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{vendor_id}}\",\n  \"payload\": {\n    \"name\": \"Standard Optical Supplies Ltd\",\n    \"email\": \"info@standardoptical.com\",\n    \"phone\": \"9820012346\",\n    \"address\": \"Industrial Estate, Mumbai\",\n    \"gstNo\": \"27AAAAA0000A1Z5\",\n    \"remark\": \"Preferred supplier\",\n    \"tags\": [\"Wholesale\", \"Key Partner\"]\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/vendor/editVendor",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vendor",
+                "editVendor"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Vendor",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/vendor/deleteVendor",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vendor",
+                "deleteVendor"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Operations",
+      "item": [
+        {
+          "name": "Lens Groups & Creation",
+          "item": [
+            {
+              "name": "Create Lens Power",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"power\": \"+2.50\",\n  \"color\": \"Clear\",\n  \"barcode\": \"LENS001\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lens/createLensPower",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "createLensPower"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Lens Power",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{lens_power_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lens/getLensPower",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "getLensPower"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Lens Powers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/lens/getAllLensPower",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "getAllLensPower"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Lens Power",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{lens_power_id}}\",\n  \"power\": \"+2.50\",\n  \"color\": \"Clear\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lens/editLensPower",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "editLensPower"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Lens Power",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/lens/deletelensPower",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "deletelensPower"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Check Barcode Exists",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"barcode\": \"LENS001\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lens/checkBarcodeExists",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "checkBarcodeExists"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Generate Unique Barcode",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lens/generateUniqueBarcode",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lens",
+                    "generateUniqueBarcode"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Lens Rate",
+          "item": [
+            {
+              "name": "Edit Lens Rate",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lensId\": \"{{lens_id}}\",\n  \"rate\": 500\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/lensRate/editLensRate",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "lensRate",
+                    "editLensRate"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lens Purchase",
+      "item": [
+        {
+          "name": "Create Lens Purchase",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 10,\n      \"rate\": 500\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchase/createLensPurchase",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchase",
+                "createLensPurchase"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Purchase",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{purchase_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchase/getLensPurchase",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchase",
+                "getLensPurchase"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Purchases",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchase/getAllLensPurchase",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchase",
+                "getAllLensPurchase"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Purchase",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 10,\n      \"rate\": 500\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchase/editLensPurchase/{{purchase_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchase",
+                "editLensPurchase",
+                "{{purchase_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Purchase",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchase/deleteLensPurchase/{{purchase_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchase",
+                "deleteLensPurchase",
+                "{{purchase_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Purchase Orders",
+      "item": [
+        {
+          "name": "Create Lens Purchase Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 10,\n      \"rate\": 500\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/createLensPurchaseOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "createLensPurchaseOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Purchase Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/getLensPurchaseOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "getLensPurchaseOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Purchase Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/getAllLensPurchaseOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "getAllLensPurchaseOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/createLensInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "createLensInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/createLensChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "createLensChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Purchase Order",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 10,\n      \"rate\": 500\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/editLensPurchaseOrder/{{order_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "editLensPurchaseOrder",
+                "{{order_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Purchase Order",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseOrder/deleteLensPurchaseOrder/{{order_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseOrder",
+                "deleteLensPurchaseOrder",
+                "{{order_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Purchase Challan",
+      "item": [
+        {
+          "name": "Create Lens Purchase Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/createLensPurchaseChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "createLensPurchaseChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Purchase Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{challan_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/getLensPurchaseChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "getLensPurchaseChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Purchase Challans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/getAllLensPurchaseChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "getAllLensPurchaseChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"challanId\": \"{{challan_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/createLensInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "createLensInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Challan From Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"invoiceId\": \"{{invoice_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/createChallanFromInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "createChallanFromInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Purchase Challan",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/editLensPurchaseChallan/{{challan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "editLensPurchaseChallan",
+                "{{challan_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Purchase Challan",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensPurchaseChallan/deleteLensPurchaseChallan/{{challan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensPurchaseChallan",
+                "deleteLensPurchaseChallan",
+                "{{challan_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Sale",
+      "item": [
+        {
+          "name": "Create Lens Sale",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 5,\n      \"rate\": 600\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSale/createLensSale",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSale",
+                "createLensSale"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Sale",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{sale_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSale/getLensSale",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSale",
+                "getLensSale"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Sales",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSale/getAllLensSale",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSale",
+                "getAllLensSale"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Sale",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": [\n    {\n      \"lensId\": \"{{lens_id}}\",\n      \"quantity\": 5,\n      \"rate\": 600\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSale/editLensSale/{{sale_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSale",
+                "editLensSale",
+                "{{sale_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Sale",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSale/deleteLensSale/{{sale_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSale",
+                "deleteLensSale",
+                "{{sale_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Sale Orders",
+      "item": [
+        {
+          "name": "Create Lens Sale Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/createLensSaleOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "createLensSaleOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Sale Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/getLensSaleOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "getLensSaleOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Sale Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/getAllLensSaleOrder",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "getAllLensSaleOrder"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/createLensInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "createLensInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/createLensChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "createLensChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Sale Order",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/editLensSaleOrder/{{order_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "editLensSaleOrder",
+                "{{order_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Sale Order",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleOrder/deleteLensSaleOrder/{{order_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleOrder",
+                "deleteLensSaleOrder",
+                "{{order_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Sale Challan",
+      "item": [
+        {
+          "name": "Create Lens Sale Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/createLensSaleChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "createLensSaleChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lens Sale Challan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{challan_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/getLensSaleChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "getLensSaleChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Lens Sale Challans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/getAllLensSaleChallan",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "getAllLensSaleChallan"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Lens Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"challanId\": \"{{challan_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/createLensInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "createLensInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Challan From Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"invoiceId\": \"{{invoice_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/createChallanFromInvoice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "createChallanFromInvoice"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Edit Lens Sale Challan",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/editLensSaleChallan/{{challan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "editLensSaleChallan",
+                "{{challan_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Lens Sale Challan",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/lensSaleChallan/deleteLensSaleChallan/{{challan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "lensSaleChallan",
+                "deleteLensSaleChallan",
+                "{{challan_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lens Returns",
+      "item": [
+        {
+          "name": "Sale Return",
+          "item": [
+            {
+              "name": "Create Lens Sale Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/SaleReturn/createLensSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "SaleReturn",
+                    "createLensSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Lens Sale Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{return_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/SaleReturn/getLensSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "SaleReturn",
+                    "getLensSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Lens Sale Returns",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/SaleReturn/getAllLensSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "SaleReturn",
+                    "getAllLensSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Lens Sale Return",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/SaleReturn/editLensSaleReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "SaleReturn",
+                    "editLensSaleReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Lens Sale Return",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/SaleReturn/deleteLensSaleReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "SaleReturn",
+                    "deleteLensSaleReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Purchase Return",
+          "item": [
+            {
+              "name": "Create Lens Purchase Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/PurchaseReturn/createLensPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "PurchaseReturn",
+                    "createLensPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Lens Purchase Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{return_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/PurchaseReturn/getLensPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "PurchaseReturn",
+                    "getLensPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Lens Purchase Returns",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/PurchaseReturn/getAllLensPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "PurchaseReturn",
+                    "getAllLensPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Lens Purchase Return",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/PurchaseReturn/editLensPurchaseReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "PurchaseReturn",
+                    "editLensPurchaseReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Lens Purchase Return",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/PurchaseReturn/deleteLensPurchaseReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "PurchaseReturn",
+                    "deleteLensPurchaseReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rx Operations",
+      "item": [
+        {
+          "name": "Rx Purchase",
+          "item": [
+            {
+              "name": "Create Rx Purchase",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/createRxPurchase",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "createRxPurchase"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Purchase",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{purchase_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/getRxPurchase",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "getRxPurchase"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Purchases",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/getAllRxPurchase",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "getAllRxPurchase"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Vendors (Rx)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/getAllVendors",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "getAllVendors"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Purchase",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/editRxPurchase/{{purchase_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "editRxPurchase",
+                    "{{purchase_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Purchase",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchase/deleteRxPurchase/{{purchase_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchase",
+                    "deleteRxPurchase",
+                    "{{purchase_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rx Purchase Orders",
+          "item": [
+            {
+              "name": "Create Rx Purchase Order",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/createRxPurchaseOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "createRxPurchaseOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Purchase Order",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{order_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/getRxPurchaseOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "getRxPurchaseOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Purchase Orders",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/getAllRxPurchaseOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "getAllRxPurchaseOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Create Rx Invoice",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/createRxInvoice",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "createRxInvoice"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Purchase Order",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/editRxPurchaseOrder/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "editRxPurchaseOrder",
+                    "{{order_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Purchase Order",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseOrder/deleteRxPurchaseOrder/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseOrder",
+                    "deleteRxPurchaseOrder",
+                    "{{order_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rx Sale",
+          "item": [
+            {
+              "name": "Create Rx Sale",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/createRxSale",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "createRxSale"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Sale",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{sale_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/getRxSale",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "getRxSale"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Sales",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/getAllRxSale",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "getAllRxSale"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Vendors (Rx Sale)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/getAllVendors",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "getAllVendors"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Sale",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/editRxSale/{{sale_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "editRxSale",
+                    "{{sale_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Sale",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSale/deleteRxSale/{{sale_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSale",
+                    "deleteRxSale",
+                    "{{sale_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rx Sale Orders",
+          "item": [
+            {
+              "name": "Create Rx Sale Order",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/createRxSaleOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "createRxSaleOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Sale Order",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{order_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/getRxSaleOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "getRxSaleOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Sale Orders",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/getAllRxSaleOrder",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "getAllRxSaleOrder"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Create Rx Invoice",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"orderId\": \"{{order_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/createRxInvoice",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "createRxInvoice"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Sale Order",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/editRxSaleOrder/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "editRxSaleOrder",
+                    "{{order_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Sale Order",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleOrder/deleteRxSaleOrder/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleOrder",
+                    "deleteRxSaleOrder",
+                    "{{order_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rx Purchase Return",
+          "item": [
+            {
+              "name": "Create Rx Purchase Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseReturn/createRxPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseReturn",
+                    "createRxPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Purchase Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{return_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseReturn/getRxPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseReturn",
+                    "getRxPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Purchase Returns",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseReturn/getAllRxPurchaseReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseReturn",
+                    "getAllRxPurchaseReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Purchase Return",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vendorId\": \"{{vendor_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseReturn/editRxPurchaseReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseReturn",
+                    "editRxPurchaseReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Purchase Return",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxPurchaseReturn/deleteRxPurchaseReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxPurchaseReturn",
+                    "deleteRxPurchaseReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rx Sale Return",
+          "item": [
+            {
+              "name": "Create Rx Sale Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"date\": \"2024-01-26\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleReturn/createRxSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleReturn",
+                    "createRxSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get Rx Sale Return",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{return_id}}\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleReturn/getRxSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleReturn",
+                    "getRxSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Get All Rx Sale Returns",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleReturn/getAllRxSaleReturn",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleReturn",
+                    "getAllRxSaleReturn"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Edit Rx Sale Return",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"items\": []\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleReturn/editRxSaleReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleReturn",
+                    "editRxSaleReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Rx Sale Return",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{auth_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/rxSaleReturn/deleteRxSaleReturn/{{return_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rxSaleReturn",
+                    "deleteRxSaleReturn",
+                    "{{return_id}}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Lens Stock Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/lensstock",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "lensstock"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Party Wise Item Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/partywiseitem",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "partywiseitem"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Lens Movement Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/lensmovement",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "lensmovement"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Day Book Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/daybook",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "daybook"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Cash Bank Book Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/cashbankbook",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "cashbankbook"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Profit & Loss Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/profitloss",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "profitloss"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Bank Accounts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reports/bankaccounts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "bankaccounts"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Parent Groups",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reports/parentgroups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "parentgroups"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Profit & Loss Account Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/profitlossaccount",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "profitlossaccount"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Transaction Summary Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/transactionsummary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "transactionsummary"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Transaction Detail Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/transactiondetail",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "transactiondetail"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Sales Summary Format Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/salesummaryformat",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "salesummaryformat"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Balance Sheet Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/balancesheet",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "balancesheet"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Collection Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/collection",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "collection"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Sale Item Group Wise Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reports/saleitemgroupwise",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "saleitemgroupwise"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "item": [
+        {
+          "name": "Account Ledger",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountId\": \"{{account_id}}\",\n  \"startDate\": \"2024-01-01\",\n  \"endDate\": \"2024-12-31\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ledger/account-ledger",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ledger",
+                "account-ledger"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Top Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/active/topProducts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "active",
+                "topProducts"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Outstanding Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/outstanding/report",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "outstanding",
+                "report"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Stations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/outstanding/stations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "outstanding",
+                "stations"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Groups (Outstanding)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/outstanding/groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "outstanding",
+                "groups"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Deleted Logs",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/deleted-logs/get",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "deleted-logs",
+                "get"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Restore Deleted Data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{deleted_log_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/deleted-logs/restore",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "deleted-logs",
+                "restore"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Permanently",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{deleted_log_id}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/deleted-logs/delete-permanent",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "deleted-logs",
+                "delete-permanent"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Reorder Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/inventory/reorder-report",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "inventory",
+                "reorder-report"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mobile App",
+      "item": [
+        {
+          "name": "Get Order Status Summary",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/mobile/orders/status-summary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "mobile",
+                "orders",
+                "status-summary"
+              ]
+            },
+            "description": "Fetch real-time counts for order statuses (Mobile Dashboard)"
+          }
+        },
+        {
+          "name": "Update Order Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"shipped\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/mobile/orders/{{order_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "mobile",
+                "orders",
+                "{{order_id}}",
+                "status"
+              ]
+            },
+            "description": "Update the status of an order. Allowed: pending, in-progress, done, shipped, delivered, cancelled"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "auth_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "customer_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "vendor_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "customer_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "group_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "account_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "item_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "lens_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "lens_power_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "purchase_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "order_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "sale_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "challan_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "invoice_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "account_group_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "tax_category_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "deleted_log_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "return_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "parent_group_id",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
