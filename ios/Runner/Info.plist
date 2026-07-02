@@ -55,6 +55,20 @@
 	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires access to your photo library to scan QR codes from screenshots.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires access to your camera to scan QR codes and capture proof of delivery photos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires access to your location to calculate distance for sorting deliveries and record pickup/delivery GPS coordinates.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app requires access to your location to calculate distance for sorting deliveries and record pickup/delivery GPS coordinates.</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+		<string>https</string>
+		<string>http</string>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

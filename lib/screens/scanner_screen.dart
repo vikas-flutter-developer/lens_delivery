@@ -14,6 +14,11 @@ class _ScannerScreenState extends State<ScannerScreen> {
   final ImagePicker _picker = ImagePicker();
   bool _isDisposed = false;
 
+  // Local queue of scanned parcels in this session
+  final List<String> _scannedCodes = [];
+  String? _lastScannedCode;
+  DateTime? _lastScanTime;
+
   @override
   void dispose() {
     _isDisposed = true;
@@ -26,12 +31,34 @@ class _ScannerScreenState extends State<ScannerScreen> {
     final List<Barcode> barcodes = capture.barcodes;
     if (barcodes.isNotEmpty) {
       final String? code = barcodes.first.rawValue;
-      if (code != null) {
-        _isDisposed = true;
-        controller.stop();
-        Navigator.pop(context, code);
+      if (code != null && code.isNotEmpty) {
+        // Prevent duplicate scan spamming within a short 2-second window
+        final now = DateTime.now();
+        if (_lastScannedCode == code && 
+            _lastScanTime != null && 
+            now.difference(_lastScanTime!).inSeconds < 2) {
+          return;
+        }
+
+        _lastScannedCode = code;
+        _lastScanTime = now;
+
+        _addCode(code);
       }
     }
+  }
+
+  void _addCode(String code) {
+    if (_scannedCodes.contains(code)) {
+      ScannedFeedback.show(context, 'Already scanned: $code', isError: true);
+      return;
+    }
+
+    setState(() {
+      _scannedCodes.add(code);
+    });
+
+    ScannedFeedback.show(context, 'Scanned: $code');
   }
 
   Future<void> _scanFromGallery() async {
@@ -43,12 +70,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
       
       if (capture != null && capture.barcodes.isNotEmpty) {
         final String? code = capture.barcodes.first.rawValue;
-        if (code != null && !_isDisposed) {
-          _isDisposed = true;
-          controller.stop();
-          if (mounted) {
-            Navigator.pop(context, code);
-          }
+        if (code != null && code.isNotEmpty) {
+          _addCode(code);
         }
       } else {
         if (mounted) {
@@ -78,17 +101,17 @@ class _ScannerScreenState extends State<ScannerScreen> {
       context: context,
       builder: (_) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-        title: const Text('Manual Identification', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('Manual Entry', style: TextStyle(fontWeight: FontWeight.bold)),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Enter the Order ID or Bill Number manually if the QR code is damaged.', style: TextStyle(color: Color(0xFF64748B), fontSize: 13)),
+            const Text('Type the Order ID or Bill Number to add it to the pickup queue.', style: TextStyle(color: Color(0xFF64748B), fontSize: 13)),
             const SizedBox(height: 20),
             TextField(
               controller: manualController,
               autofocus: true,
               decoration: InputDecoration(
-                hintText: 'e.g. LS-2024-001',
+                hintText: 'e.g. LS-2026-001',
                 filled: true,
                 fillColor: const Color(0xFFF8FAFC),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
@@ -103,22 +126,40 @@ class _ScannerScreenState extends State<ScannerScreen> {
           ),
           ElevatedButton(
             onPressed: () {
+              final val = manualController.text.trim();
               Navigator.pop(context);
-              Navigator.pop(context, manualController.text.trim());
+              if (val.isNotEmpty) {
+                _addCode(val);
+              }
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF312E81),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
-            child: const Text('Confirm', style: TextStyle(color: Colors.white)),
+            child: const Text('Add to List', style: TextStyle(color: Colors.white)),
           ),
         ],
       ),
     );
   }
 
+  void _finishPickup() {
+    if (_scannedCodes.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please scan at least one parcel before finishing.')),
+      );
+      return;
+    }
+    _isDisposed = true;
+    controller.stop();
+    Navigator.pop(context, _scannedCodes);
+  }
+
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final double screenHeight = MediaQuery.of(context).size.height;
+    
     return Scaffold(
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
@@ -137,60 +178,256 @@ class _ScannerScreenState extends State<ScannerScreen> {
       ),
       body: Stack(
         children: [
-          MobileScanner(
-            controller: controller,
-            onDetect: _onDetect,
-          ),
-          // CUSTOM SCANNER OVERLAY
-          const _ScannerOverlay(),
-          // BOTTOM CONTROLS
+          // Keep scanner area bounded above the bottom sheet
           Positioned(
-            bottom: 60,
+            top: 0,
             left: 0,
             right: 0,
-            child: Column(
-              children: [
-                const Text(
-                  'Align QR code within the frame',
-                  style: TextStyle(color: Colors.white70, fontSize: 13, fontWeight: FontWeight.w500, letterSpacing: 0.5),
+            bottom: screenHeight * 0.35,
+            child: MobileScanner(
+              controller: controller,
+              onDetect: _onDetect,
+            ),
+          ),
+          
+          // CUSTOM SCANNER OVERLAY
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: screenHeight * 0.35,
+            child: const _ScannerOverlay(),
+          ),
+
+          // SCANNED TRAY & BUTTONS (BOTTOM 38% OF SCREEN)
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: screenHeight * 0.38,
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0xFF0F172A), // Slate 900 dark background
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(32),
+                  topRight: Radius.circular(32),
                 ),
-                const SizedBox(height: 32),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildActionButton(Icons.photo_library_rounded, 'Gallery', _scanFromGallery),
-                    const SizedBox(width: 24),
-                    _buildActionButton(Icons.edit_note_rounded, 'Manual', _showManualEntryDialog),
-                  ],
-                ),
-              ],
+                boxShadow: [
+                  BoxShadow(color: Colors.black54, blurRadius: 20, spreadRadius: 5),
+                ],
+              ),
+              child: Column(
+                children: [
+                  // Drag bar indicator
+                  Container(
+                    width: 48,
+                    height: 5,
+                    margin: const EdgeInsets.only(top: 12, bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white24,
+                      borderRadius: BorderRadius.circular(3),
+                    ),
+                  ),
+
+                  // Header info
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Scanned Queue',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: theme.colorScheme.secondary.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            '${_scannedCodes.length} items',
+                            style: TextStyle(
+                              color: theme.colorScheme.secondary,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  // Horizontal Scanned List Tray
+                  Expanded(
+                    child: _scannedCodes.isEmpty
+                        ? Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.qr_code_scanner_rounded, color: Colors.white24, size: 36),
+                                const SizedBox(height: 8),
+                                Text(
+                                  'Ready to scan items...',
+                                  style: TextStyle(color: Colors.grey[500], fontSize: 13),
+                                ),
+                              ],
+                            ),
+                          )
+                        : ListView.builder(
+                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                            itemCount: _scannedCodes.length,
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              final code = _scannedCodes[index];
+                              return Container(
+                                margin: const EdgeInsets.only(right: 12),
+                                width: 140,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.05),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: Colors.white10),
+                                ),
+                                padding: const EdgeInsets.all(12),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Icon(Icons.inventory_2_outlined, color: theme.colorScheme.secondary, size: 20),
+                                        GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              _scannedCodes.removeAt(index);
+                                            });
+                                          },
+                                          child: Icon(Icons.close_rounded, color: Colors.red[300], size: 18),
+                                        ),
+                                      ],
+                                    ),
+                                    const Spacer(),
+                                    Text(
+                                      code,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      'Pickup pending',
+                                      style: TextStyle(
+                                        color: Colors.grey[500],
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                  ),
+
+                  // Bottom buttons
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
+                    child: Row(
+                      children: [
+                        // Quick Action Buttons
+                        IconButton(
+                          icon: const Icon(Icons.photo_library_rounded, color: Colors.white, size: 26),
+                          onPressed: _scanFromGallery,
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.edit_note_rounded, color: Colors.white, size: 28),
+                          onPressed: _showManualEntryDialog,
+                        ),
+                        const SizedBox(width: 12),
+                        
+                        // Done pickup button
+                        Expanded(
+                          child: SizedBox(
+                            height: 52,
+                            child: ElevatedButton(
+                              onPressed: _scannedCodes.isEmpty ? null : _finishPickup,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: theme.colorScheme.secondary,
+                                foregroundColor: Colors.white,
+                                disabledBackgroundColor: Colors.white12,
+                                disabledForegroundColor: Colors.white30,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                              ),
+                              child: Text(
+                                _scannedCodes.isEmpty
+                                    ? 'Scan Parcels'
+                                    : 'Finish Pickup (${_scannedCodes.length})',
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
       ),
     );
   }
+}
 
-  Widget _buildActionButton(IconData icon, String label, VoidCallback onTap) {
-    return Column(
-      children: [
-        InkWell(
-          onTap: onTap,
+// Visual Scanned overlay feedback utility
+class ScannedFeedback {
+  static void show(BuildContext context, String message, {bool isError = false}) {
+    final overlay = Overlay.of(context);
+    final entry = OverlayEntry(
+      builder: (context) => Positioned(
+        top: 100,
+        left: 24,
+        right: 24,
+        child: Material(
+          color: Colors.transparent,
           child: Container(
-            height: 64,
-            width: 64,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.15),
-              shape: BoxShape.circle,
-              border: Border.all(color: Colors.white24),
+              color: isError ? const Color(0xFFEF4444) : const Color(0xFF10B981),
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 10, offset: Offset(0, 4))],
             ),
-            child: Icon(icon, color: Colors.white, size: 28),
+            child: Row(
+              children: [
+                Icon(
+                  isError ? Icons.error_outline_rounded : Icons.check_circle_outline_rounded,
+                  color: Colors.white,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    message,
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-        const SizedBox(height: 12),
-        Text(label, style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold)),
-      ],
+      ),
     );
+
+    overlay.insert(entry);
+    Future.delayed(const Duration(seconds: 1), () => entry.remove());
   }
 }
 
